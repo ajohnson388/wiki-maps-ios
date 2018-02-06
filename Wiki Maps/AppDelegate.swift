@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mapbox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let token = "pk.eyJ1IjoiYW5kcmV3am9obnNvbmRldiIsImEiOiJjajRjdXhrMm8wZjVpMndudDl2eHcxank1In0.bNx85mpQv1CPlapmQvMBaw"
+        MGLAccountManager.setAccessToken(token)
+        
+        let content = MapViewController()
+        let waterfall = UINavigationController(rootViewController: ListViewController())
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = CoordinatorViewController(contentViewController: content, waterfallViewController: waterfall)
+        window?.makeKeyAndVisible()
+        
+        
+        
         return true
     }
 

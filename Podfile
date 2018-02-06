@@ -8,13 +8,14 @@ target 'Wiki Maps' do
   pod 'Gloss', '~> 2.0'
   pod 'couchbase-lite-ios', '~> 1.4'
   pod 'Mapbox-iOS-SDK', '~> 3.7'
-  # Pods for Wiki Maps
-
+  pod 'Alamofire', '~> 4.6'
+ 
   target 'Wiki MapsTests' do
     inherit! :search_paths
     pod 'Gloss', '~> 2.0'
     pod 'couchbase-lite-ios', '~> 1.4'
     pod 'Mapbox-iOS-SDK', '~> 3.7'
+    pod 'Alamofire', '~> 4.6' 
   end
 
   target 'Wiki MapsUITests' do
@@ -22,6 +23,7 @@ target 'Wiki Maps' do
     pod 'Gloss', '~> 2.0'
     pod 'couchbase-lite-ios', '~> 1.4'
     pod 'Mapbox-iOS-SDK', '~> 3.7'
+    pod 'Alamofire', '~> 4.6'
   end
 
 end
