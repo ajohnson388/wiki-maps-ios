@@ -10,6 +10,7 @@ import Foundation
 import Gloss
 
 protocol LocalDocumentType: Glossy {
+    
     var id: String { get }
     var type: String? { get }
 }

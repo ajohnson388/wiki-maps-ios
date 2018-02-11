@@ -17,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+//
+//        let request = ImportDataSetWorker.Request()
+//        ImportDataSetWorker.importDataSet(withRequest: request) { _ in }
+//
         let token = "pk.eyJ1IjoiYW5kcmV3am9obnNvbmRldiIsImEiOiJjajRjdXhrMm8wZjVpMndudDl2eHcxank1In0.bNx85mpQv1CPlapmQvMBaw"
         MGLAccountManager.setAccessToken(token)
         

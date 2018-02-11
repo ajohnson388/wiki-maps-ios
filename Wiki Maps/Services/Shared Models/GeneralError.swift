@@ -9,5 +9,10 @@
 import Foundation
 
 struct GeneralError: Error {
+    
     var localizedDescription: String
+    
+    init(_ localizedDescription: String) {
+        self.localizedDescription = localizedDescription
+    }
 }

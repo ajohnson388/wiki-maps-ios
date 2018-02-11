@@ -10,8 +10,11 @@
 		32A16105131760D0A562C06E /* Pods_Wiki_MapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534025FDB24948270A968A4D /* Pods_Wiki_MapsTests.framework */; };
 		6F2C7A144C9D5F6ADDC6591A /* Pods_Wiki_MapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91159BCC14D11BBC2604FA5A /* Pods_Wiki_MapsUITests.framework */; };
 		701FD27EF7A86993664DF9EF /* Pods_Wiki_Maps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42AC08009C48A288BD26A73 /* Pods_Wiki_Maps.framework */; };
+		8511A844202F67DF00D3A096 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511A843202F67DF00D3A096 /* Domain.swift */; };
+		8511A846202F709700D3A096 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511A845202F709700D3A096 /* DataSet.swift */; };
+		8511A84C202F75D200D3A096 /* FetchJsonWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511A84B202F75D200D3A096 /* FetchJsonWorker.swift */; };
+		8511A84E202F7A2D00D3A096 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511A84D202F7A2D00D3A096 /* Collection.swift */; };
 		8511CB842027CD110017041C /* ImportDataSetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511CB832027CD110017041C /* ImportDataSetWorker.swift */; };
-		8511CB862027CD250017041C /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511CB852027CD250017041C /* DataSet.swift */; };
 		8511CB882027E67F0017041C /* OpenDatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511CB872027E67F0017041C /* OpenDatabaseWorker.swift */; };
 		8537D7B72026BAFB0050FC41 /* LocalDocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */; };
 		8537D7B92026C1C80050FC41 /* GeItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537D7B82026C1C80050FC41 /* GeItemWorker.swift */; };
@@ -40,6 +43,7 @@
 		853C4FAA2025430300EF47EB /* ListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C4FA92025430300EF47EB /* ListConfigurator.swift */; };
 		853DECD420256DFD00EF4724 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DECD320256DFD00EF4724 /* ListViewModel.swift */; };
 		853DECD620256FD400EF4724 /* UIDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DECD520256FD400EF4724 /* UIDevice+Utils.swift */; };
+		857098CF202A934A00FFAE54 /* WorkerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857098CE202A934A00FFAE54 /* WorkerRequest.swift */; };
 		8589F7BC20252755004E4173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7BB20252755004E4173 /* AppDelegate.swift */; };
 		8589F7C320252755004E4173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8589F7C220252755004E4173 /* Assets.xcassets */; };
 		8589F7C620252755004E4173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8589F7C420252755004E4173 /* LaunchScreen.storyboard */; };
@@ -53,7 +57,15 @@
 		8589F80020252F5D004E4173 /* CoordinatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */; };
 		85D264AE202682AE00F15B19 /* WaterfallPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AD202682AE00F15B19 /* WaterfallPosition.swift */; };
 		85D264B02026859200F15B19 /* PulleyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AF2026859200F15B19 /* PulleyHandler.swift */; };
-		85D264B220268F7C00F15B19 /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264B120268F7B00F15B19 /* LocalDatabase.swift */; };
+		85ED93C820293B740080E371 /* MenuViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93C720293B740080E371 /* MenuViewControllerInput.swift */; };
+		85ED93CA20293B890080E371 /* MenuViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93C920293B890080E371 /* MenuViewControllerOutput.swift */; };
+		85ED93CC20293B9C0080E371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93CB20293B9C0080E371 /* MenuViewController.swift */; };
+		85ED93D120293BD90080E371 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93D020293BD90080E371 /* MenuRouter.swift */; };
+		85ED93D320293C110080E371 /* MenuRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93D220293C110080E371 /* MenuRouterInput.swift */; };
+		85ED93D520293C2C0080E371 /* MenuConfiguratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93D420293C2C0080E371 /* MenuConfiguratorType.swift */; };
+		85ED93D720293C350080E371 /* MenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93D620293C350080E371 /* MenuConfigurator.swift */; };
+		85ED93D920293C820080E371 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93D820293C820080E371 /* MenuInteractor.swift */; };
+		85ED93DC20293D8E0080E371 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93DB20293D8E0080E371 /* MenuViewModel.swift */; };
 		85FFB25420277F2600C1F943 /* LocalDatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FFB25320277F2600C1F943 /* LocalDatabaseConfig.swift */; };
 		85FFB25620278A6400C1F943 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FFB25520278A6400C1F943 /* GeneralError.swift */; };
 		85FFB25820278FCA00C1F943 /* SaveItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FFB25720278FCA00C1F943 /* SaveItemWorker.swift */; };
@@ -84,8 +96,11 @@
 		4EBF81604BE36F0471BFBED5 /* Pods-Wiki Maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wiki Maps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wiki Maps/Pods-Wiki Maps.debug.xcconfig"; sourceTree = "<group>"; };
 		534025FDB24948270A968A4D /* Pods_Wiki_MapsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wiki_MapsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6330CEB3E21446C771FC2159 /* Pods-Wiki MapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wiki MapsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wiki MapsTests/Pods-Wiki MapsTests.release.xcconfig"; sourceTree = "<group>"; };
+		8511A843202F67DF00D3A096 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		8511A845202F709700D3A096 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		8511A84B202F75D200D3A096 /* FetchJsonWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchJsonWorker.swift; sourceTree = "<group>"; };
+		8511A84D202F7A2D00D3A096 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8511CB832027CD110017041C /* ImportDataSetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDataSetWorker.swift; sourceTree = "<group>"; };
-		8511CB852027CD250017041C /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		8511CB872027E67F0017041C /* OpenDatabaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDatabaseWorker.swift; sourceTree = "<group>"; };
 		8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDocumentType.swift; sourceTree = "<group>"; };
 		8537D7B82026C1C80050FC41 /* GeItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeItemWorker.swift; sourceTree = "<group>"; };
@@ -114,6 +129,7 @@
 		853C4FA92025430300EF47EB /* ListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfigurator.swift; sourceTree = "<group>"; };
 		853DECD320256DFD00EF4724 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		853DECD520256FD400EF4724 /* UIDevice+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utils.swift"; sourceTree = "<group>"; };
+		857098CE202A934A00FFAE54 /* WorkerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerRequest.swift; sourceTree = "<group>"; };
 		8589F7B820252755004E4173 /* Wiki Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wiki Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8589F7BB20252755004E4173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8589F7C220252755004E4173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,8 +149,16 @@
 		8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorInteractor.swift; sourceTree = "<group>"; };
 		85D264AD202682AE00F15B19 /* WaterfallPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallPosition.swift; sourceTree = "<group>"; };
 		85D264AF2026859200F15B19 /* PulleyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyHandler.swift; sourceTree = "<group>"; };
-		85D264B120268F7B00F15B19 /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
 		85D264B32026900F00F15B19 /* objc-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-bridge.h"; sourceTree = "<group>"; };
+		85ED93C720293B740080E371 /* MenuViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerInput.swift; sourceTree = "<group>"; };
+		85ED93C920293B890080E371 /* MenuViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerOutput.swift; sourceTree = "<group>"; };
+		85ED93CB20293B9C0080E371 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		85ED93D020293BD90080E371 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		85ED93D220293C110080E371 /* MenuRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouterInput.swift; sourceTree = "<group>"; };
+		85ED93D420293C2C0080E371 /* MenuConfiguratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConfiguratorType.swift; sourceTree = "<group>"; };
+		85ED93D620293C350080E371 /* MenuConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConfigurator.swift; sourceTree = "<group>"; };
+		85ED93D820293C820080E371 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		85ED93DB20293D8E0080E371 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		85FFB25320277F2600C1F943 /* LocalDatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabaseConfig.swift; sourceTree = "<group>"; };
 		85FFB25520278A6400C1F943 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 		85FFB25720278FCA00C1F943 /* SaveItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveItemWorker.swift; sourceTree = "<group>"; };
@@ -172,6 +196,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8511A847202F711F00D3A096 /* External Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "External Database";
+			sourceTree = "<group>";
+		};
+		8511A848202F713300D3A096 /* Shared Models */ = {
+			isa = PBXGroup;
+			children = (
+				85FFB25520278A6400C1F943 /* GeneralError.swift */,
+				8511A843202F67DF00D3A096 /* Domain.swift */,
+				8511A845202F709700D3A096 /* DataSet.swift */,
+				8511A84D202F7A2D00D3A096 /* Collection.swift */,
+			);
+			path = "Shared Models";
+			sourceTree = "<group>";
+		};
 		8537D7BA2026C1CB0050FC41 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +317,23 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		854BD25E202FB573005AD1CD /* Shared Workers */ = {
+			isa = PBXGroup;
+			children = (
+				8511A84B202F75D200D3A096 /* FetchJsonWorker.swift */,
+			);
+			path = "Shared Workers";
+			sourceTree = "<group>";
+		};
+		854BD25F202FB5CF005AD1CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */,
+				85FFB25320277F2600C1F943 /* LocalDatabaseConfig.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8589F7AF20252755004E4173 = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +370,7 @@
 				8589F7C420252755004E4173 /* LaunchScreen.storyboard */,
 				8589F7C720252755004E4173 /* Info.plist */,
 				853DECD520256FD400EF4724 /* UIDevice+Utils.swift */,
+				857098CE202A934A00FFAE54 /* WorkerRequest.swift */,
 			);
 			path = "Wiki Maps";
 			sourceTree = "<group>";
@@ -360,6 +420,11 @@
 		8589F7EB20252DD1004E4173 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				85ED93DA20293D830080E371 /* Models */,
+				85ED93CF20293BC60080E371 /* Configurator */,
+				85ED93CE20293BB40080E371 /* Router */,
+				85ED93CD20293BAC0080E371 /* Interactor */,
+				85ED93C620293B650080E371 /* Controller */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -416,23 +481,22 @@
 		8589F7F120252E1C004E4173 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				854BD25E202FB573005AD1CD /* Shared Workers */,
+				8511A848202F713300D3A096 /* Shared Models */,
+				8511A847202F711F00D3A096 /* External Database */,
 				8589F7F320252E2D004E4173 /* iCloud */,
-				8589F7F220252E20004E4173 /* Local Database */,
+				8589F7F220252E20004E4173 /* Internal Database */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		8589F7F220252E20004E4173 /* Local Database */ = {
+		8589F7F220252E20004E4173 /* Internal Database */ = {
 			isa = PBXGroup;
 			children = (
-				85FFB25520278A6400C1F943 /* GeneralError.swift */,
+				854BD25F202FB5CF005AD1CD /* Models */,
 				8537D7BA2026C1CB0050FC41 /* Workers */,
-				85D264B120268F7B00F15B19 /* LocalDatabase.swift */,
-				8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */,
-				85FFB25320277F2600C1F943 /* LocalDatabaseConfig.swift */,
-				8511CB852027CD250017041C /* DataSet.swift */,
 			);
-			path = "Local Database";
+			path = "Internal Database";
 			sourceTree = "<group>";
 		};
 		8589F7F320252E2D004E4173 /* iCloud */ = {
@@ -449,6 +513,50 @@
 				8589F7F720252E8B004E4173 /* CoordinatorConfiguratorType.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		85ED93C620293B650080E371 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85ED93C720293B740080E371 /* MenuViewControllerInput.swift */,
+				85ED93C920293B890080E371 /* MenuViewControllerOutput.swift */,
+				85ED93CB20293B9C0080E371 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		85ED93CD20293BAC0080E371 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85ED93D820293C820080E371 /* MenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85ED93CE20293BB40080E371 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85ED93D020293BD90080E371 /* MenuRouter.swift */,
+				85ED93D220293C110080E371 /* MenuRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85ED93CF20293BC60080E371 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				85ED93D420293C2C0080E371 /* MenuConfiguratorType.swift */,
+				85ED93D620293C350080E371 /* MenuConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		85ED93DA20293D830080E371 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85ED93DB20293D8E0080E371 /* MenuViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A0F1C9FAE3E25D7455F304D1 /* Pods */ = {
@@ -794,20 +902,26 @@
 				8589F7FC20252F26004E4173 /* CoordinatorViewControllerInput.swift in Sources */,
 				85FFB25A2027955A00C1F943 /* DeleteItemWorker.swift in Sources */,
 				8537D7BC2026C1E80050FC41 /* GetItemsWorker.swift in Sources */,
+				85ED93CC20293B9C0080E371 /* MenuViewController.swift in Sources */,
 				853C4F8C202535FB00EF47EB /* MapRouterInput.swift in Sources */,
 				8537D7B92026C1C80050FC41 /* GeItemWorker.swift in Sources */,
 				853C4F86202534F600EF47EB /* MapViewControllerOutput.swift in Sources */,
 				853C4F9A202541E000EF47EB /* ListViewControllerInput.swift in Sources */,
 				853C4F95202539AB00EF47EB /* Rectangle.swift in Sources */,
+				85ED93C820293B740080E371 /* MenuViewControllerInput.swift in Sources */,
+				85ED93CA20293B890080E371 /* MenuViewControllerOutput.swift in Sources */,
 				8511CB842027CD110017041C /* ImportDataSetWorker.swift in Sources */,
 				8589F7FE20252F31004E4173 /* CoordinatorViewControllerOutput.swift in Sources */,
 				8589F7FA20252EC3004E4173 /* CoordinatorViewController.swift in Sources */,
-				8511CB862027CD250017041C /* DataSet.swift in Sources */,
+				85ED93D920293C820080E371 /* MenuInteractor.swift in Sources */,
+				8511A846202F709700D3A096 /* DataSet.swift in Sources */,
+				8511A844202F67DF00D3A096 /* Domain.swift in Sources */,
 				853C4F912025375000EF47EB /* MapItem.swift in Sources */,
+				85ED93D120293BD90080E371 /* MenuRouter.swift in Sources */,
 				8537D7B72026BAFB0050FC41 /* LocalDocumentType.swift in Sources */,
 				85D264AE202682AE00F15B19 /* WaterfallPosition.swift in Sources */,
-				85D264B220268F7C00F15B19 /* LocalDatabase.swift in Sources */,
 				853C4F7F2025311200EF47EB /* MapConfigurator.swift in Sources */,
+				8511A84C202F75D200D3A096 /* FetchJsonWorker.swift in Sources */,
 				853C4FA62025424C00EF47EB /* ListInteractor.swift in Sources */,
 				853C4FA22025423F00EF47EB /* ListRouter.swift in Sources */,
 				853C4F8E2025362000EF47EB /* MapRouter.swift in Sources */,
@@ -823,10 +937,15 @@
 				853C4FA42025424500EF47EB /* ListRouterInput.swift in Sources */,
 				853C4F932025392D00EF47EB /* FetchMapItems.swift in Sources */,
 				8589F7F620252E7F004E4173 /* CoordinatorConfigurator.swift in Sources */,
+				857098CF202A934A00FFAE54 /* WorkerRequest.swift in Sources */,
 				853C4FAA2025430300EF47EB /* ListConfigurator.swift in Sources */,
 				85FFB25820278FCA00C1F943 /* SaveItemWorker.swift in Sources */,
+				85ED93D320293C110080E371 /* MenuRouterInput.swift in Sources */,
 				8589F7F820252E8B004E4173 /* CoordinatorConfiguratorType.swift in Sources */,
+				85ED93DC20293D8E0080E371 /* MenuViewModel.swift in Sources */,
+				85ED93D720293C350080E371 /* MenuConfigurator.swift in Sources */,
 				853C4F7A202530A800EF47EB /* CoordinatorViewModel.swift in Sources */,
+				8511A84E202F7A2D00D3A096 /* Collection.swift in Sources */,
 				853C4F782025302A00EF47EB /* CoordinatorRouter.swift in Sources */,
 				853C4F7D202530FC00EF47EB /* MapConfiguratorType.swift in Sources */,
 				853C4F82202534E800EF47EB /* MapViewController.swift in Sources */,
@@ -834,6 +953,7 @@
 				85D264B02026859200F15B19 /* PulleyHandler.swift in Sources */,
 				853DECD620256FD400EF4724 /* UIDevice+Utils.swift in Sources */,
 				85FFB25620278A6400C1F943 /* GeneralError.swift in Sources */,
+				85ED93D520293C2C0080E371 /* MenuConfiguratorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
