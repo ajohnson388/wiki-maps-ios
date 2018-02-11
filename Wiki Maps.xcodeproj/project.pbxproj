@@ -55,6 +55,7 @@
 		8589F7FC20252F26004E4173 /* CoordinatorViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FB20252F26004E4173 /* CoordinatorViewControllerInput.swift */; };
 		8589F7FE20252F31004E4173 /* CoordinatorViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FD20252F31004E4173 /* CoordinatorViewControllerOutput.swift */; };
 		8589F80020252F5D004E4173 /* CoordinatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */; };
+		85C661992030E66D0029D7A1 /* FetchListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C661982030E66D0029D7A1 /* FetchListItems.swift */; };
 		85D264AE202682AE00F15B19 /* WaterfallPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AD202682AE00F15B19 /* WaterfallPosition.swift */; };
 		85D264B02026859200F15B19 /* PulleyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AF2026859200F15B19 /* PulleyHandler.swift */; };
 		85ED93C820293B740080E371 /* MenuViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93C720293B740080E371 /* MenuViewControllerInput.swift */; };
@@ -147,6 +148,7 @@
 		8589F7FB20252F26004E4173 /* CoordinatorViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewControllerInput.swift; sourceTree = "<group>"; };
 		8589F7FD20252F31004E4173 /* CoordinatorViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewControllerOutput.swift; sourceTree = "<group>"; };
 		8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorInteractor.swift; sourceTree = "<group>"; };
+		85C661982030E66D0029D7A1 /* FetchListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListItems.swift; sourceTree = "<group>"; };
 		85D264AD202682AE00F15B19 /* WaterfallPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallPosition.swift; sourceTree = "<group>"; };
 		85D264AF2026859200F15B19 /* PulleyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyHandler.swift; sourceTree = "<group>"; };
 		85D264B32026900F00F15B19 /* objc-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-bridge.h"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				853DECD320256DFD00EF4724 /* ListViewModel.swift */,
+				85C661982030E66D0029D7A1 /* FetchListItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -926,6 +929,7 @@
 				853C4FA22025423F00EF47EB /* ListRouter.swift in Sources */,
 				853C4F8E2025362000EF47EB /* MapRouter.swift in Sources */,
 				853C4F892025358500EF47EB /* MapInteractor.swift in Sources */,
+				85C661992030E66D0029D7A1 /* FetchListItems.swift in Sources */,
 				853C4F762025300D00EF47EB /* CoordinatorRouterInput.swift in Sources */,
 				8589F7BC20252755004E4173 /* AppDelegate.swift in Sources */,
 				853C4FA8202542E500EF47EB /* ListConfiguratorType.swift in Sources */,

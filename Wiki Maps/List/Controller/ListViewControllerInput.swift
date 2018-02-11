@@ -10,4 +10,5 @@ import Foundation
 
 protocol ListViewControllerInput: class {
     
+    func didFetchListItems(withResponse response: FetchListItems.Response)
 }

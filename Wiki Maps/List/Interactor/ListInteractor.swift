@@ -16,6 +16,15 @@ final class ListInteractor {
     init(presenter: ListViewControllerInput) {
         self.presenter = presenter
     }
+    
+    
+    /**
+        The list view is driven by the data displayed by the map. This
+        data should be shared across the two views via a listener.
+     */
+    func setupMapDataListener() {
+        
+    }
 }
 
 
@@ -23,5 +32,8 @@ final class ListInteractor {
 
 extension ListInteractor: ListViewControllerOutput {
     
-    
+    func fetchListItems(withRequest request: FetchListItems.Request) {
+        // TODO: This will be used for searching otherwise, waterfall just
+        // displays whats visibile
+    }
 }

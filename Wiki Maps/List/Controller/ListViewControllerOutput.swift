@@ -10,4 +10,6 @@ import Foundation
 
 protocol ListViewControllerOutput: class {
     var viewModel: ListViewModel { get }
+    
+    func fetchListItems(withRequest request: FetchListItems.Request)
 }

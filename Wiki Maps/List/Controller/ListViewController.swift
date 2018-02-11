@@ -43,17 +43,17 @@ final class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20//interactor.viewModel.items.count
+        return interactor.viewModel.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = interactor.viewModel.items[indexPath.row]
         let reuseId = "map_item_cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseId)
             ?? UITableViewCell(style: .subtitle, reuseIdentifier: reuseId)
-        //let item = interactor.viewModel.items[indexPath.row]
         cell.accessoryType = UIDevice.isPad ? .detailButton : .disclosureIndicator
-        cell.textLabel?.text = "TEST"//item.title
-        cell.detailTextLabel?.text = "FSFDS"//item.subtitle
+        cell.textLabel?.text = item.title
+        cell.detailTextLabel?.text = item.subtitle
         cell.selectionStyle = .gray
         return cell
     }
@@ -73,4 +73,13 @@ final class ListViewController: UITableViewController {
 
 extension ListViewController: ListViewControllerInput {
     
+    func didFetchListItems(withResponse response: FetchListItems.Response) {
+        switch response {
+        case .success:
+            tableView.reloadData()
+        case .error(let error):
+            // TODO: Handle error case
+            print(error.localizedDescription)
+        }
+    }
 }
