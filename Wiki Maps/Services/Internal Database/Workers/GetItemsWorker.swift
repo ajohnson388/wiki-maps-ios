@@ -14,10 +14,14 @@ struct GetItemsWorker {
         var geobox: Rectangle?
         var workerThread: DispatchQueue? = DispatchQueue.global(qos: .background)
         var responseThread: DispatchQueue? = DispatchQueue.main
+        
+        init(geobox: Rectangle?) {
+            self.geobox = geobox
+        }
     }
     
     enum Response {
-        case success(items: [[String: Any]]?)
+        case success(items: [[String: Any]])
         case error(error: Error)
     }
     

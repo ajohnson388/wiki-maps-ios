@@ -11,4 +11,5 @@ import Foundation
 protocol MapViewcontrollerInput: class {
     
     func didReceiveMapItems(response: FetchMapItems.Response)
+    func didUpdateMapItem(withResponse response: UpdateMapItem.Response)
 }

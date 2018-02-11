@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MapViewControllerOutput: class {
-    
+    var viewModel: MapViewModel { get }
     func fetchMapItems(withRequest request: FetchMapItems.Request)
+    func updateMapItem(withRequest request: UpdateMapItem.Request)
 }

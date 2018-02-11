@@ -77,4 +77,14 @@ extension MapViewController: MapViewcontrollerInput {
             break
         }
     }
+    
+    func didUpdateMapItem(withResponse response: UpdateMapItem.Response) {
+        // TODO: Implement
+        switch response {
+        case .success:
+            break
+        case .error(let error):
+            break
+        }
+    }
 }
