@@ -1,6 +1,7 @@
 # Wiki Maps
-> Wiki maps is a free, generic, and open-source iOS app for simulating fantasy
-    world maps to track game progress and see points of interest.
+
+> Wiki maps is a free, community-driven iOS app that connects the fantasy maps
+of video games with the world of wiki.
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
