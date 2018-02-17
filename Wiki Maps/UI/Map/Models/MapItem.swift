@@ -14,8 +14,7 @@ struct MapItem: LocalDocumentType {
     let id: String
     let type: String?
     
-    var latitude: Double?
-    var longitude: Double?
+    var location: Location
     
     var category: String?
     var subcategory: String?
@@ -33,8 +32,7 @@ extension MapItem {
     struct Keys {
         static let id = "_id"
         static let type = "type"
-        static let latitude = "latitude"
-        static let longitude = "longitude"
+        static let location = "location"
         static let category = "category"
         static let subcategory = "subcategory"
         static let tags = "tags"
@@ -54,8 +52,7 @@ extension MapItem {
         }
         self.id = id
         type = Keys.type <~~ json
-        latitude = Keys.latitude <~~ json
-        longitude = Keys.longitude <~~ json
+        location = Keys.location <~~ json ?? Location()
         category = Keys.category <~~ json
         subcategory = Keys.subcategory <~~ json
         tags = Keys.tags <~~ json ?? []
@@ -67,8 +64,7 @@ extension MapItem {
         return jsonify([
             Keys.id ~~> id,
             Keys.type ~~> type,
-            Keys.latitude ~~> latitude,
-            Keys.longitude ~~> longitude,
+            Keys.location ~~> location,
             Keys.category ~~> category,
             Keys.subcategory ~~> subcategory,
             Keys.tags ~~> tags,

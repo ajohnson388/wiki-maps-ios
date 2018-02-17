@@ -16,6 +16,8 @@
 		8511A84E202F7A2D00D3A096 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511A84D202F7A2D00D3A096 /* Collection.swift */; };
 		8511CB842027CD110017041C /* ImportDataSetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511CB832027CD110017041C /* ImportDataSetWorker.swift */; };
 		8511CB882027E67F0017041C /* OpenDatabaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511CB872027E67F0017041C /* OpenDatabaseWorker.swift */; };
+		8520870220389C2600BBE474 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520870120389C2600BBE474 /* Location.swift */; };
+		852087042038A3CD00BBE474 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852087032038A3CD00BBE474 /* View.swift */; };
 		8537D7B72026BAFB0050FC41 /* LocalDocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */; };
 		8537D7B92026C1C80050FC41 /* GeItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537D7B82026C1C80050FC41 /* GeItemWorker.swift */; };
 		8537D7BC2026C1E80050FC41 /* GetItemsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537D7BB2026C1E80050FC41 /* GetItemsWorker.swift */; };
@@ -105,6 +107,8 @@
 		8511A84D202F7A2D00D3A096 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8511CB832027CD110017041C /* ImportDataSetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDataSetWorker.swift; sourceTree = "<group>"; };
 		8511CB872027E67F0017041C /* OpenDatabaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDatabaseWorker.swift; sourceTree = "<group>"; };
+		8520870120389C2600BBE474 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		852087032038A3CD00BBE474 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDocumentType.swift; sourceTree = "<group>"; };
 		8537D7B82026C1C80050FC41 /* GeItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeItemWorker.swift; sourceTree = "<group>"; };
 		8537D7BB2026C1E80050FC41 /* GetItemsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemsWorker.swift; sourceTree = "<group>"; };
@@ -207,17 +211,6 @@
 			children = (
 			);
 			path = "External Database";
-			sourceTree = "<group>";
-		};
-		8511A848202F713300D3A096 /* Shared Models */ = {
-			isa = PBXGroup;
-			children = (
-				85FFB25520278A6400C1F943 /* GeneralError.swift */,
-				8511A843202F67DF00D3A096 /* Domain.swift */,
-				8511A845202F709700D3A096 /* DataSet.swift */,
-				8511A84D202F7A2D00D3A096 /* Collection.swift */,
-			);
-			path = "Shared Models";
 			sourceTree = "<group>";
 		};
 		8537D7BA2026C1CB0050FC41 /* Workers */ = {
@@ -326,6 +319,59 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		85431A2E2038BC50006DDECD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				85431A332038BCD7006DDECD /* Extensions */,
+				85431A2F2038BC56006DDECD /* Models */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		85431A2F2038BC56006DDECD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				857098CE202A934A00FFAE54 /* WorkerRequest.swift */,
+				85FFB25520278A6400C1F943 /* GeneralError.swift */,
+				8511A84D202F7A2D00D3A096 /* Collection.swift */,
+				8511A845202F709700D3A096 /* DataSet.swift */,
+				8511A843202F67DF00D3A096 /* Domain.swift */,
+				8520870120389C2600BBE474 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85431A332038BCD7006DDECD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				853DECD520256FD400EF4724 /* UIDevice+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85431A342038BD15006DDECD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8589F7BB20252755004E4173 /* AppDelegate.swift */,
+				8589F7EC20252DEC004E4173 /* Coordinator */,
+				8589F7EB20252DD1004E4173 /* Menu */,
+				8589F7EA20252DC5004E4173 /* List */,
+				8589F7E920252DC0004E4173 /* Map */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		85431A352038BD56006DDECD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85D264B32026900F00F15B19 /* objc-bridge.h */,
+				8589F7C220252755004E4173 /* Assets.xcassets */,
+				8589F7C420252755004E4173 /* LaunchScreen.storyboard */,
+				8589F7C720252755004E4173 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		854BD25E202FB573005AD1CD /* Shared Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +383,7 @@
 		854BD25F202FB5CF005AD1CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				852087032038A3CD00BBE474 /* View.swift */,
 				8537D7B62026BAFB0050FC41 /* LocalDocumentType.swift */,
 				85FFB25320277F2600C1F943 /* LocalDatabaseConfig.swift */,
 			);
@@ -368,18 +415,10 @@
 		8589F7BA20252755004E4173 /* Wiki Maps */ = {
 			isa = PBXGroup;
 			children = (
-				85D264B32026900F00F15B19 /* objc-bridge.h */,
+				85431A352038BD56006DDECD /* Resources */,
+				85431A2E2038BC50006DDECD /* Components */,
 				8589F7F120252E1C004E4173 /* Services */,
-				8589F7EC20252DEC004E4173 /* Coordinator */,
-				8589F7EB20252DD1004E4173 /* Menu */,
-				8589F7EA20252DC5004E4173 /* List */,
-				8589F7E920252DC0004E4173 /* Map */,
-				8589F7BB20252755004E4173 /* AppDelegate.swift */,
-				8589F7C220252755004E4173 /* Assets.xcassets */,
-				8589F7C420252755004E4173 /* LaunchScreen.storyboard */,
-				8589F7C720252755004E4173 /* Info.plist */,
-				853DECD520256FD400EF4724 /* UIDevice+Utils.swift */,
-				857098CE202A934A00FFAE54 /* WorkerRequest.swift */,
+				85431A342038BD15006DDECD /* UI */,
 			);
 			path = "Wiki Maps";
 			sourceTree = "<group>";
@@ -491,7 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				854BD25E202FB573005AD1CD /* Shared Workers */,
-				8511A848202F713300D3A096 /* Shared Models */,
 				8511A847202F711F00D3A096 /* External Database */,
 				8589F7F320252E2D004E4173 /* iCloud */,
 				8589F7F220252E20004E4173 /* Internal Database */,
@@ -929,6 +967,7 @@
 				8511A844202F67DF00D3A096 /* Domain.swift in Sources */,
 				853C4F912025375000EF47EB /* MapItem.swift in Sources */,
 				85ED93D120293BD90080E371 /* MenuRouter.swift in Sources */,
+				8520870220389C2600BBE474 /* Location.swift in Sources */,
 				8537D7B72026BAFB0050FC41 /* LocalDocumentType.swift in Sources */,
 				85D264AE202682AE00F15B19 /* WaterfallPosition.swift in Sources */,
 				853C4F7F2025311200EF47EB /* MapConfigurator.swift in Sources */,
@@ -937,6 +976,7 @@
 				853C4FA22025423F00EF47EB /* ListRouter.swift in Sources */,
 				853C4F8E2025362000EF47EB /* MapRouter.swift in Sources */,
 				853C4F892025358500EF47EB /* MapInteractor.swift in Sources */,
+				852087042038A3CD00BBE474 /* View.swift in Sources */,
 				85C661992030E66D0029D7A1 /* FetchListItems.swift in Sources */,
 				853C4F762025300D00EF47EB /* CoordinatorRouterInput.swift in Sources */,
 				8589F7BC20252755004E4173 /* AppDelegate.swift in Sources */,
