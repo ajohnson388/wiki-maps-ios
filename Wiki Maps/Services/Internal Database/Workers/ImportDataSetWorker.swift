@@ -42,21 +42,38 @@ struct ImportDataSetWorker {
                     // TODO: Run indexing if needed
                     
                     // Save each map item
-                    for mapItem in request.dataSet.list {
-                        let
+                    let items: [SaveItemsWorker.Request.Item] = request.dataSet.list.flatMap {
+                        guard let properties = $0.toJSON() else {
+                            return nil
+                        }
+                        return SaveItemsWorker.Request
+                            .Item(id: $0.id, properties: properties)
                     }
+                    var saveRequest = SaveItemsWorker.Request(items)
+                    saveRequest.workerThread = nil
+                    saveRequest.responseThread = nil
+                    SaveItemsWorker.saveItems(withRequest: saveRequest) { responses in
+                        // Handler errors if any
+                        let generalError = GeneralError("Failed to save items")
+                        var importResponse = Response.error(error: generalError)
+                        for response in responses {
+                            switch response {
+                            case .success:
+                                importResponse = Response.success
+                                break
+                            case .error(let error):
+                                // TODO: Handle when logger is integrated
+                                break
+                            }
+                        }
+                        
+                        request.asyncResponse(importResponse,
+                                              handler: responseHandler)
+                    }
+                    
                     
                     // Save import configs into a single collection
             }
         }
-    }
-    
-    private static func setupViews(forDataSet dataSet: DataSet,
-                                   inDatabase db: CBLDatabase) {
-        let view = db.viewNamed(dataSet.domainName)
-        view.documentType = dataSet.domainName
-//        view.mapBlock = { doc, emitter in
-//
-//        }
     }
 }
