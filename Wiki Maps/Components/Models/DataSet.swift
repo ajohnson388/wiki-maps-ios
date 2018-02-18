@@ -11,7 +11,7 @@ import Gloss
 
 struct DataSet {
     
-    var type: String
+    var domainName: String
     var list: [MapItem]
 }
 
@@ -35,13 +35,13 @@ extension DataSet: Glossy {
         guard let type: String = Keys.type <~~ json else {
             return nil
         }
-        self.type = type
+        self.domainName = type
         list = Keys.list <~~ json ?? []
     }
     
     func toJSON() -> JSON? {
         return jsonify([
-            Keys.type ~~> type,
+            Keys.type ~~> domainName,
             Keys.list ~~> list
         ])
     }

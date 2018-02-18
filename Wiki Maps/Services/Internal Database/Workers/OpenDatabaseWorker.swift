@@ -46,9 +46,9 @@ struct OpenDatabaseWorker {
                 let database = try manager.openDatabaseNamed(databaseName, with: nil)
                 
                 // Setup the initial views
-                IndexManager.setupDomainNameView(inDatabase: database, version: 0)
-                IndexManager.setupResourceView(inDatabase: database, version: 0)
-                IndexManager.setupUserProfileView(inDatabase: database, version: 0)
+                IndexManager.setupDomainNameView(inDatabase: database)
+                IndexManager.setupResourceView(inDatabase: database)
+                IndexManager.setupUserProfileView(inDatabase: database)
             } catch {
                 response = Response.error(error)
             }

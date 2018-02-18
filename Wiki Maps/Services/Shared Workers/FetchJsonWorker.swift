@@ -61,8 +61,8 @@ struct FetchJsonWorker {
                 // Convert the data to json
                 do {
                     let json = try JSONSerialization.jsonObject(with: data,
-                                                                options: []) as! [String: Any]
-                    request.asyncResponse(Response.success(json: json),
+                                                                options: []) as? [String: Any]
+                    request.asyncResponse(Response.success(json: json ?? [:]),
                                           handler: responseHandler)
                 } catch {
                     request.asyncResponse(Response.error(error: error),
@@ -83,8 +83,8 @@ struct FetchJsonWorker {
         
         do {
             let data = try Data(contentsOf: fileUrl)
-            let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            request.asyncResponse(Response.success(json: json), handler: responseHandler)
+            let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            request.asyncResponse(Response.success(json: json ?? [:]), handler: responseHandler)
         } catch {
             let error = GeneralError("Failed to get contents of file: \(fileName)")
             request.asyncResponse(Response.error(error: error), handler: responseHandler)

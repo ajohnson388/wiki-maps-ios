@@ -34,10 +34,17 @@ struct ImportDataSetWorker {
                 .backgroundTellDatabaseNamed(LocalDatabaseConfig.databaseName) { db in
                     
                     // Create the view(s) for the data set
+                    let collection = Collection(request.dataSet.domainName)
+                    IndexManager.setupMapItemsCategoryView(inDatabase: db, forCollection: collection)
+                    IndexManager.setupMapItemsGeoView(inDatabase: db, forCollection: collection)
+                    IndexManager.setupMapItemsSearchView(inDatabase: db, forCollection: collection)
                     
-                    // Run indexing if needed
+                    // TODO: Run indexing if needed
                     
-                    // Save each map item into a game-specific collection
+                    // Save each map item
+                    for mapItem in request.dataSet.list {
+                        let
+                    }
                     
                     // Save import configs into a single collection
             }
@@ -46,8 +53,8 @@ struct ImportDataSetWorker {
     
     private static func setupViews(forDataSet dataSet: DataSet,
                                    inDatabase db: CBLDatabase) {
-        let view = db.viewNamed(dataSet.type)
-        view.documentType = dataSet.type
+        let view = db.viewNamed(dataSet.domainName)
+        view.documentType = dataSet.domainName
 //        view.mapBlock = { doc, emitter in
 //
 //        }

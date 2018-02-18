@@ -14,7 +14,7 @@ struct IndexManager {
      Domain name view drives the game selection that would appear
      in the menu or in the onboarding screen.
      */
-    static func setupDomainNameView(inDatabase db: CBLDatabase, version: Int) {
+    static func setupDomainNameView(inDatabase db: CBLDatabase) {
         let collection = Collection.domain
         let viewName = View.name.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
@@ -25,7 +25,7 @@ struct IndexManager {
                 return
             }
             emit(name, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
     
     /**
@@ -33,8 +33,7 @@ struct IndexManager {
      and latitudes.
      */
     static func setupMapItemsGeoView(inDatabase db: CBLDatabase,
-                                     forCollection collection: Collection,
-                                     version: Int) {
+                                     forCollection collection: Collection) {
         let viewName = View.geo.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
         view.documentType = collection.name
@@ -51,7 +50,7 @@ struct IndexManager {
             // Create the geo key and emit the doc
             let key = CBLGeoPoint(x: longitude, y: latitude)
             emit(key, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
     
     /**
@@ -59,8 +58,7 @@ struct IndexManager {
      The list view is sperated into categories and subcategories.
      */
     static func setupMapItemsCategoryView(inDatabase db: CBLDatabase,
-                                          forCollection collection: Collection,
-                                          version: Int) {
+                                          forCollection collection: Collection) {
         // Keys -->  [category, subcategory, name]
         let viewName = View.category.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
@@ -71,7 +69,7 @@ struct IndexManager {
             let name = doc[MapItem.Keys.title] as? String
             let keys = [category, subcategory, name]
             emit(keys, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
     
     
@@ -79,9 +77,8 @@ struct IndexManager {
      Each game (data set) will have its own search view. This view
      permits searching of an relvant data field in a map item.
      */
-    static func setupMapItemsSearchView(inDatebase db: CBLDatabase,
-                                        forCollection collection: Collection,
-                                        version: Int) {
+    static func setupMapItemsSearchView(inDatabase db: CBLDatabase,
+                                        forCollection collection: Collection) {
         let viewName = View.search.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
         view.documentType = collection.name
@@ -101,15 +98,14 @@ struct IndexManager {
             // Emit the key
             let key = CBLTextKey(searchText)
             emit(key, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
     
     /**
      Each resource view contains all of the resource blobs
      used per game. For now just a collection
      */
-    static func setupResourceView(inDatabase db: CBLDatabase,
-                                  version: Int) {
+    static func setupResourceView(inDatabase db: CBLDatabase) {
         let collection = Collection.resources
         let viewName = View.category.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
@@ -122,14 +118,14 @@ struct IndexManager {
             }
             let key = [domainName, subtype]
             emit(key, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
     
     /**
      Only one user profile view will exist that captures every profile
      for every game.
      */
-    static func setupUserProfileView(inDatabase db: CBLDatabase, version: Int) {
+    static func setupUserProfileView(inDatabase db: CBLDatabase) {
         let collection = Collection.userData
         let viewName = View.category.getName(forCollection: collection)
         let view = db.viewNamed(viewName)
@@ -142,6 +138,6 @@ struct IndexManager {
             }
             let key = [domainName, name]
             emit(key, nil)
-        }, version: "\(version)")
+        }, version: "\(0)")
     }
 }
