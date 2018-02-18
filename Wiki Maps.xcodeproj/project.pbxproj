@@ -62,6 +62,9 @@
 		85C6619D2030F18E0029D7A1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6619C2030F18E0029D7A1 /* MapViewModel.swift */; };
 		85D264AE202682AE00F15B19 /* WaterfallPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AD202682AE00F15B19 /* WaterfallPosition.swift */; };
 		85D264B02026859200F15B19 /* PulleyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D264AF2026859200F15B19 /* PulleyHandler.swift */; };
+		85E6CD582039CA1900F1AC3F /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6CD572039CA1900F1AC3F /* Resource.swift */; };
+		85E6CD5A2039D0CA00F1AC3F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6CD592039D0CA00F1AC3F /* UserProfile.swift */; };
+		85E6CD5C2039D3C200F1AC3F /* IndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6CD5B2039D3C200F1AC3F /* IndexManager.swift */; };
 		85ED93C820293B740080E371 /* MenuViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93C720293B740080E371 /* MenuViewControllerInput.swift */; };
 		85ED93CA20293B890080E371 /* MenuViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93C920293B890080E371 /* MenuViewControllerOutput.swift */; };
 		85ED93CC20293B9C0080E371 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED93CB20293B9C0080E371 /* MenuViewController.swift */; };
@@ -160,6 +163,9 @@
 		85D264AD202682AE00F15B19 /* WaterfallPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallPosition.swift; sourceTree = "<group>"; };
 		85D264AF2026859200F15B19 /* PulleyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyHandler.swift; sourceTree = "<group>"; };
 		85D264B32026900F00F15B19 /* objc-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-bridge.h"; sourceTree = "<group>"; };
+		85E6CD572039CA1900F1AC3F /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		85E6CD592039D0CA00F1AC3F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		85E6CD5B2039D3C200F1AC3F /* IndexManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexManager.swift; sourceTree = "<group>"; };
 		85ED93C720293B740080E371 /* MenuViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerInput.swift; sourceTree = "<group>"; };
 		85ED93C920293B890080E371 /* MenuViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerOutput.swift; sourceTree = "<group>"; };
 		85ED93CB20293B9C0080E371 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -337,6 +343,8 @@
 				8511A845202F709700D3A096 /* DataSet.swift */,
 				8511A843202F67DF00D3A096 /* Domain.swift */,
 				8520870120389C2600BBE474 /* Location.swift */,
+				85E6CD572039CA1900F1AC3F /* Resource.swift */,
+				85E6CD592039D0CA00F1AC3F /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,17 +367,6 @@
 				8589F7E920252DC0004E4173 /* Map */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		85431A352038BD56006DDECD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				85D264B32026900F00F15B19 /* objc-bridge.h */,
-				8589F7C220252755004E4173 /* Assets.xcassets */,
-				8589F7C420252755004E4173 /* LaunchScreen.storyboard */,
-				8589F7C720252755004E4173 /* Info.plist */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		854BD25E202FB573005AD1CD /* Shared Workers */ = {
@@ -415,7 +412,10 @@
 		8589F7BA20252755004E4173 /* Wiki Maps */ = {
 			isa = PBXGroup;
 			children = (
-				85431A352038BD56006DDECD /* Resources */,
+				8589F7C420252755004E4173 /* LaunchScreen.storyboard */,
+				8589F7C220252755004E4173 /* Assets.xcassets */,
+				8589F7C720252755004E4173 /* Info.plist */,
+				85D264B32026900F00F15B19 /* objc-bridge.h */,
 				85431A2E2038BC50006DDECD /* Components */,
 				8589F7F120252E1C004E4173 /* Services */,
 				85431A342038BD15006DDECD /* UI */,
@@ -542,6 +542,7 @@
 			children = (
 				854BD25F202FB5CF005AD1CD /* Models */,
 				8537D7BA2026C1CB0050FC41 /* Workers */,
+				85E6CD5B2039D3C200F1AC3F /* IndexManager.swift */,
 			);
 			path = "Internal Database";
 			sourceTree = "<group>";
@@ -977,6 +978,7 @@
 				853C4F8E2025362000EF47EB /* MapRouter.swift in Sources */,
 				853C4F892025358500EF47EB /* MapInteractor.swift in Sources */,
 				852087042038A3CD00BBE474 /* View.swift in Sources */,
+				85E6CD5C2039D3C200F1AC3F /* IndexManager.swift in Sources */,
 				85C661992030E66D0029D7A1 /* FetchListItems.swift in Sources */,
 				853C4F762025300D00EF47EB /* CoordinatorRouterInput.swift in Sources */,
 				8589F7BC20252755004E4173 /* AppDelegate.swift in Sources */,
@@ -986,8 +988,10 @@
 				853C4F84202534EF00EF47EB /* MapViewControllerInput.swift in Sources */,
 				853C4F98202541D900EF47EB /* ListViewController.swift in Sources */,
 				853DECD420256DFD00EF4724 /* ListViewModel.swift in Sources */,
+				85E6CD582039CA1900F1AC3F /* Resource.swift in Sources */,
 				853C4FA42025424500EF47EB /* ListRouterInput.swift in Sources */,
 				853C4F932025392D00EF47EB /* FetchMapItems.swift in Sources */,
+				85E6CD5A2039D0CA00F1AC3F /* UserProfile.swift in Sources */,
 				8589F7F620252E7F004E4173 /* CoordinatorConfigurator.swift in Sources */,
 				857098CF202A934A00FFAE54 /* WorkerRequest.swift in Sources */,
 				853C4FAA2025430300EF47EB /* ListConfigurator.swift in Sources */,
