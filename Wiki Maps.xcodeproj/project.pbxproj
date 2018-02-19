@@ -57,6 +57,7 @@
 		8589F7FC20252F26004E4173 /* CoordinatorViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FB20252F26004E4173 /* CoordinatorViewControllerInput.swift */; };
 		8589F7FE20252F31004E4173 /* CoordinatorViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FD20252F31004E4173 /* CoordinatorViewControllerOutput.swift */; };
 		8589F80020252F5D004E4173 /* CoordinatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */; };
+		85BB6FAD203B826200168329 /* FetchLocalDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB6FAC203B826200168329 /* FetchLocalDataset.swift */; };
 		85C661992030E66D0029D7A1 /* FetchListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C661982030E66D0029D7A1 /* FetchListItems.swift */; };
 		85C6619B2030EEE00029D7A1 /* UpdateMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6619A2030EEE00029D7A1 /* UpdateMapItem.swift */; };
 		85C6619D2030F18E0029D7A1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6619C2030F18E0029D7A1 /* MapViewModel.swift */; };
@@ -157,6 +158,7 @@
 		8589F7FB20252F26004E4173 /* CoordinatorViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewControllerInput.swift; sourceTree = "<group>"; };
 		8589F7FD20252F31004E4173 /* CoordinatorViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewControllerOutput.swift; sourceTree = "<group>"; };
 		8589F7FF20252F5D004E4173 /* CoordinatorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorInteractor.swift; sourceTree = "<group>"; };
+		85BB6FAC203B826200168329 /* FetchLocalDataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocalDataset.swift; sourceTree = "<group>"; };
 		85C661982030E66D0029D7A1 /* FetchListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListItems.swift; sourceTree = "<group>"; };
 		85C6619A2030EEE00029D7A1 /* UpdateMapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMapItem.swift; sourceTree = "<group>"; };
 		85C6619C2030F18E0029D7A1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				85FFB2592027955A00C1F943 /* DeleteItemWorker.swift */,
 				8511CB832027CD110017041C /* ImportDataSetWorker.swift */,
 				8511CB872027E67F0017041C /* OpenDatabaseWorker.swift */,
+				85BB6FAC203B826200168329 /* FetchLocalDataset.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				853C4F82202534E800EF47EB /* MapViewController.swift in Sources */,
 				8511CB882027E67F0017041C /* OpenDatabaseWorker.swift in Sources */,
 				85D264B02026859200F15B19 /* PulleyHandler.swift in Sources */,
+				85BB6FAD203B826200168329 /* FetchLocalDataset.swift in Sources */,
 				853DECD620256FD400EF4724 /* UIDevice+Utils.swift in Sources */,
 				85FFB25620278A6400C1F943 /* GeneralError.swift in Sources */,
 				85ED93D520293C2C0080E371 /* MenuConfiguratorType.swift in Sources */,
